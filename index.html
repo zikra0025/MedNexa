@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedNexa | AI Healthcare Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Med<span>Nexa</span></h1>
+    <p>AI-powered medication companion</p>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="tag">SMARTER MEDICATION CARE</span>
+      <h2>Your health, <span>made simpler.</span></h2>
+      <p>Understand your prescriptions and stay on track with your medicines.</p>
+    </section>
+
+    <section class="card">
+      <h2>📄 Prescription Assistant</h2>
+      <p>Upload a prescription image to get started.</p>
+
+      <label for="prescription">Choose prescription image</label>
+      <input id="prescription" type="file" accept="image/*">
+
+      <button id="analyzeBtn">Analyze Prescription</button>
+      <p class="note">Demo only: AI results need professional verification.</p>
+      <div id="analysisResult" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h2>💊 Medicine Information</h2>
+      <p>Ask a question about a medicine.</p>
+      <form id="medicineForm">
+        <input id="medicineQuestion" type="text"
+          placeholder="e.g. What is this medicine used for?"
+          required>
+        <button type="submit">Ask MedNexa AI</button>
+      </form>
+      <div id="aiResponse" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h2>⏰ Medicine Reminders</h2>
+      <p>Add a reminder for your prescribed medicine schedule.</p>
+      <form id="reminderForm">
+        <input id="medicineName" type="text"
+          placeholder="Medicine name" required>
+        <input id="medicineTime" type="time" required>
+        <button type="submit">Add Reminder</button>
+      </form>
+      <ul id="reminderList"></ul>
+      <p class="note">Reminders work while this page is open. Do not rely on this demo for critical doses.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>MedNexa © 2026 · Supporting safer medication management</p>
+    <p>Not a substitute for professional medical advice.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
